@@ -1,0 +1,7 @@
+nameOverride: "test-app-db"
+fullnameOverride: "test-app-db"
+auth:
+  username: "admin"
+  password: "12345678"
+  # existingSecret: test-app-db-env
+  database: "postgres"

@@ -1,0 +1,19 @@
+image:
+  registry: registry.gitlab.com
+  image: gitlab-org/gitlab-runner
+  tag: alpine-v12.9.0
+imagePullPolicy: Always
+gitlabUrl: "https://gitlab.com/"
+runnerRegistrationToken: "GR134894156Kjponqjx5cm-jjssyb"
+unregisterRunners: true
+rbac:
+  create: true
+  clusterWideAccess: true
+  rules:
+    - apiGroups: ["*"]
+      resources: ["*"]
+      verbs: ["*"]
+metrics:
+  enabled: true
+runners:
+  privileged: true
