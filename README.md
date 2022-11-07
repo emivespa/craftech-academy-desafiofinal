@@ -1,2 +1,1 @@
-TODO:
-- [ ] remove instances of :latest
+![](diagram.png)
