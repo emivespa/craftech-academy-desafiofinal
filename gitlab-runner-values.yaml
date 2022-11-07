@@ -4,7 +4,7 @@ image:
   tag: alpine-v12.9.0
 imagePullPolicy: Always
 gitlabUrl: "https://gitlab.com/"
-runnerRegistrationToken: "GR134894156Kjponqjx5cm-jjssyb"
+runnerRegistrationToken: "GR1348941RtLRvj4h1j-YXTB_YQyw"
 unregisterRunners: true
 rbac:
   create: true
