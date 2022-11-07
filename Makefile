@@ -62,4 +62,4 @@ gitlab-runner:
 	# helm repo add gitlab https://charts.gitlab.io
 	# helm repo update
 	helm upgrade --install -f gitlab-runner-values.yaml -n gitlab-runner gitlab-runner gitlab/gitlab-runner
-	k apply -f cluster-admin-rolebinding.yaml 
+	kubectl apply -f cluster-admin-rolebinding.yaml 
