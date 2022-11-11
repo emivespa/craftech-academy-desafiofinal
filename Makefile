@@ -27,7 +27,7 @@ prometheus:
 	# helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 	# helm repo update
 	helm upgrade --install -n monitoreo prometheus prometheus-community/prometheus
-	kubectl -n monitoreo expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-np
+	# kubectl -n monitoreo expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-np
 	# minikube service prometheus-server-np -n monitoreo
 	# # Add datasource to grafana as http://service:port
 
@@ -37,7 +37,7 @@ grafana:
 	# helm repo add grafana https://grafana.github.io/helm-charts
 	# helm repo update
 	helm upgrade --install -f grafana-values.yaml -n monitoreo grafana grafana/grafana
-	kubectl -n monitoreo expose service grafana --type=NodePort --target-port=3000 --name=grafana-np
+	# kubectl -n monitoreo expose service grafana --type=NodePort --target-port=3000 --name=grafana-np
 	kubectl get secret --namespace default grafana -o jsonpath="{.data.admin-password}" | base64 --decode ; echo
 	# minikube service grafana-np -n monitoreo
 	# # Add prometheus and loki datasources as http://service:port
