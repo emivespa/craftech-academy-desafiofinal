@@ -1,7 +1,7 @@
 image:
   registry: registry.gitlab.com
   image: gitlab-org/gitlab-runner
-  tag: alpine-v12.9.0
+  tag: alpine-v15.3.3
 imagePullPolicy: Always
 gitlabUrl: "https://gitlab.com/"
 runnerRegistrationToken: "GR1348941RtLRvj4h1j-YXTB_YQyw"
