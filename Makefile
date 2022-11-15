@@ -21,16 +21,6 @@ test-app-db:
 
 # https://blog.marcnuri.com/prometheus-grafana-setup-minikube
 
-.PHONY: prometheus
-prometheus:
-	kubectl create namespace monitoreo || true
-	# helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
-	# helm repo update
-	helm upgrade --install -n monitoreo prometheus prometheus-community/prometheus
-	# kubectl -n monitoreo expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-np
-	# minikube service prometheus-server-np -n monitoreo
-	# # Add datasource to grafana as http://service:port
-
 .PHONY: grafana
 grafana:
 	kubectl create namespace monitoreo || true
@@ -50,6 +40,16 @@ loki:
 	# helm repo add grafana https://grafana.github.io/helm-charts
 	# helm repo update
 	helm upgrade --install -n monitoreo loki grafana/loki-stack
+	# # Add datasource to grafana as http://service:port
+
+.PHONY: prometheus
+prometheus:
+	kubectl create namespace monitoreo || true
+	# helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+	# helm repo update
+	helm upgrade --install -n monitoreo prometheus prometheus-community/prometheus
+	# kubectl -n monitoreo expose service prometheus-server --type=NodePort --target-port=9090 --name=prometheus-server-np
+	# minikube service prometheus-server-np -n monitoreo
 	# # Add datasource to grafana as http://service:port
 
 ################################################################################
