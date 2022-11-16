@@ -1,2 +1,5 @@
 loki:
   isDefault: false
+    # Default of true clashes with kube-prometheus-stack's default datasource
+    # and you end up with only one. Either Loki on Prometheus literally
+    # depending on what got installed first.
