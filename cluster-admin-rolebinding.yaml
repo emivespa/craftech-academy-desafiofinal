@@ -1,3 +1,4 @@
+# https://craftech-community.slack.com/archives/C03L44FTZ1V/p1662123301822419?thread_ts=1662069285.179059&cid=C03L44FTZ1V
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
