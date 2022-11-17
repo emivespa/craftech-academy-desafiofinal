@@ -16,7 +16,7 @@ repos:
 test-app-db:
 	kubectl create namespace $(namespace) || true
 	kubectl apply -f test-app-db-env.yaml
-	helm install -f test-app-db-values.yaml -n $(namespace) test-app-db bitnami/postgresql
+	helm upgrade --install -f test-app-db-values.yaml -n $(namespace) test-app-db bitnami/postgresql
 
 .PHONY: test-app-backend
 test-app-backend: test-app-db
