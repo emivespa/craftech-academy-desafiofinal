@@ -1,0 +1,6 @@
+[submodule "test-app-backend"]
+	path = test-app-backend
+	url = https://gitlab.com/tpfinalcraftech/test-app-backend/
+[submodule "test-app-frontend"]
+	path = test-app-frontend
+	url = https://gitlab.com/tpfinalcraftech/test-app-frontend
