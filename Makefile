@@ -1,12 +1,5 @@
 default: ;
 
-.PHONY: namespaces
-namespaces:
-	kubectl create namespace prd
-	kubectl create namespace dev
-	kubectl create namespace monitoreo
-	kubectl create namespace gitlab-runner
-
 .PHONY: repos
 repos:
 	helm repo add bitnami https://charts.bitnami.com/bitnami
