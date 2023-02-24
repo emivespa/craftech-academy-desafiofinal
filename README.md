@@ -1,3 +1,5 @@
+[Plan de migracion a AWS](https://docs.google.com/document/d/1r4y3ZLJOV95E42FV_pBEpUUAIzd7uj5HfRDfE2F0tAE/edit?usp=sharing)
+
 ## Install
 
 	minikube start
@@ -14,6 +16,3 @@
 	make loki kube-prometheus-stack # Default grafana pass is 'prom-operator'.
 	make gitlab-runner
 
-## Diagram
-
-![](diagram.png)
